@@ -9,9 +9,9 @@ class Leilao
 {
     private \PDO $connection;
 
-    public function __construct()
+    public function __construct(\PDO $connection)
     {
-        $this->connection = ConnectionCreator::getConnection();
+        $this->connection = $connection;
     }
 
     public function salva(ModelLeilao $leilao): void
